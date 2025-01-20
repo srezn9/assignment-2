@@ -37,6 +37,13 @@
 
   .black{background-color: rgba(17, 17, 17, 1);}
 
+  .curriculum-title{
+    color: rgba(17, 17, 17, 1);
+    font-size: 2.9rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
 /* header starts here */
 .navbar{
   max-width:1440px;
@@ -80,7 +87,10 @@
 
 /* banner section */
 
-
+.main{
+  max-width:1440px;
+  margin:0 auto;
+}
 
 .banner-content{
   max-width: 640px;
@@ -97,14 +107,70 @@
   font-weight: 400;
 }
 
-.banner-content{grid-area: banner-content;}
-.banner-img{grid-area: banner-img}
+/* .banner-content{grid-area: banner-content;}
+.banner-img{grid-area: banner-img;
+width:100%;} */
 
 .banner{
-  max-width:1200px;
-  margin: 0 auto;
-  display:grid;
-  grid-template-areas:
+  display:flex;
+  gap:50px;
+  /* grid-template-areas:
   "banner-content banner-img"
-  ;
+  ; */
+}
+
+.banner-img{
+  /* width:100%; */
+}
+
+
+/* curriculum */
+
+.curriculum{
+  background-image: url(../assets/bg.png);
+}
+
+.curriculum-content{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:25px;
+}
+.btn{
+  font-size: 1rem;
+  font-weight: 700;
+  border:none;
+  background-color: white;
+  /* padding:0;
+  margin-top: 32px; */
+}
+
+.display-flex{
+  display:flex;
+}
+.school-years{
+  width:360px;
+  width:470px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border:2px solid tomato;
+}
+.grade-title{
+  color:#202020;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.grade-details{
+  color:#808080;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.grade-details{
+  padding:0px 40px;
+}
+
+/* media query */
+@media screen and (max-width: 576px) {
+  .banner{flex-direction:column;}
 }
