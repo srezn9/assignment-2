@@ -92,9 +92,6 @@
   margin:0 auto;
 }
 
-.banner-content{
-  max-width: 640px;
-}
 
 .banner-title{
   font-size: 3.5rem;
@@ -114,15 +111,12 @@ width:100%;} */
 .banner{
   display:flex;
   flex-direction: row;
-  gap:50px;
+  gap:300px;
   /* grid-template-areas:
   "banner-content banner-img"
   ; */
 }
 
-.banner-img{
-  /* width:100%; */
-}
 
 
 /* curriculum */
@@ -208,5 +202,15 @@ width:100%;} */
 
 /* media query */
 @media screen and (max-width: 576px) {
-  .banner{flex-direction:column;}
+  .banner{flex-direction:column;
+  gap:20px;
+  }
+  .banner-content{
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+  .banner-img{width:100%;
+    order: 1;
+  }
 }
