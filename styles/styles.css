@@ -37,7 +37,8 @@
 
   .black{background-color: rgba(17, 17, 17, 1);}
 
-  .curriculum-title{
+  .curriculum-title, .story-title{
+    margin-bottom: 80px;
     color: rgba(17, 17, 17, 1);
     font-size: 2.9rem;
     font-weight: 700;
@@ -87,10 +88,10 @@
 
 /* banner section */
 
-.main{
+/* .main{
   max-width:1440px;
   margin:0 auto;
-}
+} */
 
 
 .banner-title{
@@ -109,6 +110,8 @@
 width:100%;} */
 
 .banner{
+  max-width:1440px;
+  margin:0 auto;
   display:flex;
   flex-direction: row;
   gap:300px;
@@ -122,10 +125,12 @@ width:100%;} */
 /* curriculum */
 
 .curriculum{
+  max-width:1440px;
+  margin:0 auto;
   background-image: url(../assets/bg.png);
 }
 
-.curriculum-title{margin-bottom: 80px;}
+
 
 .curriculum-content{
   display:grid;
@@ -154,13 +159,13 @@ width:100%;} */
   border-radius: 18px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
 }
-.grade-title{
+.grade-title, .heading1{
   color:#202020;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.grade-details{
+.grade-detail, .story{
   color:#808080;
   font-size: 1rem;
   font-weight: 500;
@@ -196,9 +201,93 @@ width:100%;} */
   background-color: #FEA301;
   border-radius:30%;
 }
-/* .grade-details{
-  padding:0px 40px;
+
+
+/* story */
+.stories{
+  max-width:1440px;
+  height:1100px;
+  margin:0 auto;
+  /* background: linear-gradient(to top, #fae7c6, #ffffff), url(../assets/bg.png); */
+  background: url('../assets/bg.png'), linear-gradient(to top, #fae7c6, #ffffff);
+
+}
+#big-card{
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  grid-row: span 3;
+}
+#big-card img{
+  /* border-radius: 16px; */
+  height:500px;
+}
+
+#big-card .card-date1{
+  width:180px;
+  max-height:48px;
+  text-align: center;
+  font-size:1rem;
+  font-weight: 500;
+  color:white;
+  border:none;
+  border-radius:47px;
+  background-color: #3CD8E8;
+}
+
+.card-date{
+  width:175px;
+  height:38px;
+  text-align: center;
+  font-size:1rem;
+  font-weight: 500;
+  color:white;
+  border:none;
+  border-radius:47px;
+  background-color: #95B226;
+}
+.heading{
+  font-size: 1rem;
+  font-weight: 700;
+}
+/* .heading1{
+  margin-bottom:5px;
+}
+.story{
+  margin-bottom:20px;
 } */
+
+.card-content1{
+  margin:-20px 35px;
+}
+.card-content{
+  margin:-30px 35px;
+}
+
+.story-content{
+  /* height:635px; */
+  /* margin-left: 140px;
+  margin-right: 140px; */
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:18.5px;
+
+  /* border: 2px solid tomato; */
+}
+.four{
+ /* width:100%; */
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:2px;
+}
+.card-1, .card-2, .card-3, .card-4, .card-5{ border-radius: 16px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+}
+.card-image{
+  border-radius: 16px;
+}
+
+.view{
+  margin:80px 620px;
+}
 
 /* media query */
 @media screen and (max-width: 576px) {
@@ -212,5 +301,13 @@ width:100%;} */
   }
   .banner-img{width:100%;
     order: 1;
+  }
+
+.school-title, .list-item, #contact{display:none;}
+.navbar{
+  padding: 10px;
+  border-bottom: 1px solid #FEA301;}
+  .curriculum-content{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
