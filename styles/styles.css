@@ -48,6 +48,8 @@
 
   .main{max-width:1440px;
   margin:0 auto;}
+
+  
 /* header starts here */
 .navbar{
   width:1440px;
@@ -91,10 +93,6 @@
 
 /* banner section */
 
-/* .main{
-  max-width:1440px;
-  margin:0 auto;
-} */
 
 
 .banner-title{
@@ -108,9 +106,6 @@
   font-weight: 400;
 }
 
-/* .banner-content{grid-area: banner-content;}
-.banner-img{grid-area: banner-img;
-width:100%;} */
 
 .banner{
   width:1440px;
@@ -118,9 +113,6 @@ width:100%;} */
   display:flex;
   flex-direction: row;
   gap:300px;
-  /* grid-template-areas:
-  "banner-content banner-img"
-  ; */
 }
 
 
@@ -128,8 +120,6 @@ width:100%;} */
 /* curriculum */
 
 .curriculum{
-  /* width:1440px;
-  margin:0 auto; */
   background-image: url(../assets/bg.png);
 }
 
@@ -145,16 +135,12 @@ width:100%;} */
   font-weight: 700;
   border:none;
   background-color: white;
-  /* padding:0;
-  margin-top: 32px; */
 }
 
 .display-flex{
   display:flex;
 }
 .school-years{
-  /* width:360px;
-  width:470px; */
   max-width: 360px;
   justify-content: center;
   align-items: center;
@@ -208,7 +194,12 @@ width:100%;} */
   border:none;
 }
 
-
+marquee{
+  background-color:  rgba(1, 172, 253, 1);
+  color:white;
+  font-size: 2rem;
+  font-weight: 700;
+}
 
  /* story section */
  .story-section{
@@ -234,7 +225,6 @@ gap: 10px;
   background-color: #ffffff;
   border-radius: 16px;
   max-width:540px;
-  /* margin-left:10px; */
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
 }
  .card-2, .card-3, .card-4, .card-5{
@@ -274,7 +264,6 @@ gap: 10px;
   border-radius:47px;
   background-color: #3CD8E8;
   margin-left:20px;
-  /* margin:-30px 35px; */
   margin-top:-35px;
 }
 .card-date{
@@ -298,7 +287,7 @@ gap: 10px;
 /* Footer */
 
 .footer{
-  width:1440px;
+  max-width:1440px;
   background-color: #1f2829;
   margin: 0 auto;
 }
@@ -358,6 +347,7 @@ gap: 10px;
 
 /* media query */
 @media screen and (max-width: 576px) {
+  marquee{display: none;}
   .banner{flex-direction:column;
   gap:20px;
   width:100%;
@@ -378,21 +368,82 @@ gap: 10px;
 .navbar{
   padding: 10px;
   border-bottom: 1px solid #FEA301;}
-  .curriculum-content{
-    grid-template-columns: repeat(1, 1fr);
+  
+    .curriculum {
+      background-size: cover;
+      padding: 20px;
+    }
+  
+    .curriculum-content {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .school-years {
+      max-width: 100%; 
+      padding: 20px; 
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+    .arrow{
+      display:none;
+    }
+  
+    
+  
+
+  .story-section {
+    border:none;
+    height: auto;}
+
+  .card-box-1{
+    display:none;
   }
-  .school-years{width:100%;
-    margin-right:10px;
-  padding:30px 20px;}
-  .arrow{
-    display: none;
+  .card-box-2{
+    overflow-x: auto;
   }
 
-  /*  */
-  /* .footer-div{
-    width: 576px;
-  } */
-  .footer{
+  .cards img {
+    width: 100%;
+    height: auto;
+  }
+  .view {
+    margin: 40px auto;
+    text-align: center;
+  }
+
+
+  
+  .footer {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .footer-div {
     flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .education-left {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-right:20px;
+  }
+  .education-middle{
+    margin-right:30px;
+  }
+  .education-img {
+    margin: 0 auto;
+  }
+  .footer-li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #footer-about {
+    text-align: center;
+  }
+  .keep-touch {
+   text-align: center;
   }
 }
