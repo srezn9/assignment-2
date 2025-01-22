@@ -45,6 +45,9 @@
     text-align: center;
   }
 
+
+  .main{max-width:1440px;
+  margin:0 auto;}
 /* header starts here */
 .navbar{
   width:1440px;
@@ -125,8 +128,8 @@ width:100%;} */
 /* curriculum */
 
 .curriculum{
-  width:1440px;
-  margin:0 auto;
+  /* width:1440px;
+  margin:0 auto; */
   background-image: url(../assets/bg.png);
 }
 
@@ -135,7 +138,7 @@ width:100%;} */
 .curriculum-content{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:25px;
+  gap:20px;
 }
 .btn{
   font-size: 1rem;
@@ -152,6 +155,7 @@ width:100%;} */
 .school-years{
   /* width:360px;
   width:470px; */
+  max-width: 360px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -193,39 +197,73 @@ width:100%;} */
   gap:5px;
 }
 .arrow1, .arrow2{
+  height:60px;
   width:60px;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   color:white;
   background-color: #FEA301;
-  border-radius:30%;
+  border-radius:50%;
+  border:none;
 }
 
 
-/* story */
-.stories{
-  width:1440px;
-  margin:0 auto;
-  border-bottom: 10px solid white;
-  background: url('../assets/bg.png'), linear-gradient(to top, #fae7c6, #ffffff);
 
-}
-.story-section{
-  width:1080px;
-  margin: 0 auto;
+ /* story section */
+ .story-section{
+  height:1100px;
+  border-bottom: 20px solid white;
+  background: url('../assets/bg.png'), linear-gradient(to top, #fae7c6, #ffffff)
+ }
 
+ .cards{display:flex;
+gap: 10px;
 }
-#big-card{
+.cards img{
+  border-radius: 16px;
+  width:100%;
+}
+ .card-box-2{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:10px;
+  border-radius: 16px;
+ }
+.card-box-1{
+  background-color: #ffffff;
+  border-radius: 16px;
+  max-width:540px;
+  /* margin-left:10px; */
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
-  grid-row: span 3;
 }
-#big-card img{
-  /* border-radius: 16px; */
-
+ .card-2, .card-3, .card-4, .card-5{
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+ }
+ .story, .heading1, .heading {
+  padding:10px;
+  text-align: start;
+  margin-left: 20px;
+ }
+ .heading1{
+  font-size:1.25rem ;
+  font-weight:700;
+  color:#000000;
+ }
+ .story{
+  font-size:1rem;
+  font-weight:500;
+  color:#666666;
+ }
+.heading{
+  font-size:1rem;
+  font-weight:700;
+  color:#000000;
 }
 
-#big-card .card-date1{
+.card-date1{
   width:180px;
   height:48px;
   text-align: center;
@@ -235,8 +273,10 @@ width:100%;} */
   border:none;
   border-radius:47px;
   background-color: #3CD8E8;
+  margin-left:20px;
+  /* margin:-30px 35px; */
+  margin-top:-35px;
 }
-
 .card-date{
   width:175px;
   height:38px;
@@ -247,57 +287,13 @@ width:100%;} */
   border:none;
   border-radius:47px;
   background-color: #95B226;
-}
-.heading{
-  font-size: 1rem;
-  font-weight: 700;
-}
-/* .heading1{
-  margin-bottom:5px;
-}
-.story{
-  margin-bottom:20px;
-} */
-
-.card-content1{
-  padding:;
- 
-  margin:-20px 35px;
-}
-.card-content{
-  
-  margin:-30px 35px;
-}
-
-.story-content{
-  /* height:635px; */
-  /* margin-left: 140px;
-  margin-right: 140px; */
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:18.5px;
-
-  /* border: 2px solid tomato; */
-}
-.four{
- /* width:100%; */
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:18px;
-}
-.card-1, .card-2, .card-3, .card-4, .card-5{
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
-}
-.card-image{
-  border-radius: 16px;
+  margin-left: 20px;
+  margin-top: -35px;
 }
 
 .view{
   margin:80px 620px;
 }
-
 
 /* Footer */
 
@@ -364,21 +360,39 @@ width:100%;} */
 @media screen and (max-width: 576px) {
   .banner{flex-direction:column;
   gap:20px;
+  width:100%;
   }
   .banner-content{
-    justify-content: center;
-    align-items: center;
     order: 2;
   }
   .banner-img{width:100%;
     order: 1;
   }
 
+  .banner-title, .banner-description{
+    text-align: center;
+    padding:20px;
+  }
+.banner-content .btn-primary{margin-left:75px;}
 .school-title, .list-item, #contact{display:none;}
 .navbar{
   padding: 10px;
   border-bottom: 1px solid #FEA301;}
   .curriculum-content{
     grid-template-columns: repeat(1, 1fr);
+  }
+  .school-years{width:100%;
+    margin-right:10px;
+  padding:30px 20px;}
+  .arrow{
+    display: none;
+  }
+
+  /*  */
+  /* .footer-div{
+    width: 576px;
+  } */
+  .footer{
+    flex-direction: column;
   }
 }
